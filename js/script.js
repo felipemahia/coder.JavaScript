@@ -78,3 +78,26 @@ total();
 
 // Si, es muy parecido... Ya se, y algo de culpa siento; entonces va otro, que me sirve para practicar a no robar xD:
 alert('"Me re robaste guacho" habrás pensado y tenés razón \n Solo por culpa hago otro xD ');
+
+let emailUser, passUser;
+
+function validarUser(emailUser, passUser) {
+    //Esto no será necesario luego, ya que con el DOM se indicará que los datos séan required y el email se de este tipo de dato
+    while (emailUser == "" || passUser == "") {
+        alert("Tiene que ingresar un email y/o una contraseña");
+        emailUser = prompt("Ingrese su email");
+        passUser = prompt("Ingrese su contraseña");
+    }
+    impresion(emailUser, passUser);
+}
+
+function impresion(emailUser, passUser) {
+    console.log("User: " + emailUser);
+    console.log("Contraseña: " + passUser);
+    alert("Bienvenido: " + emailUser);
+}
+
+emailUser = prompt("Ingrese su email");
+passUser = prompt("Ingrese su contraseña");
+
+validarUser(emailUser, passUser);

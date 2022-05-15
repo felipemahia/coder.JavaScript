@@ -50,6 +50,8 @@ while (ingreso != "4") {//
 
 total(); 
 
+//ACÁ ME GUSTARÍA QUE SE MOSTRARA EL PRECIO "GASTADO" DIGAMOS, PERO NO SÉ CÓMO.
+
 
 
 
@@ -76,28 +78,31 @@ total();
 
 
 
+
+
+
 // Si, es muy parecido... Ya se, y algo de culpa siento; entonces va otro, que me sirve para practicar a no robar xD:
 alert('"Me re robaste guacho" habrás pensado y tenés razón \n Solo por culpa hago otro xD ');
 
-let emailUser, passUser;
+let emailUser, passwordUser, celUser;
+emailUser = prompt("Ingrese su email");
+passwordUser = prompt("Ingrese su contraseña");
 
-function validarUser(emailUser, passUser) {
-    //Esto no será necesario luego, ya que con el DOM se indicará que los datos séan required y el email se de este tipo de dato
-    while (emailUser == "" || passUser == "") {
+function validarUser(emailUser, passwordUser) {
+    while (emailUser == "" || passwordUser == "" || celUser == "") {
         alert("Tiene que ingresar un email y/o una contraseña");
         emailUser = prompt("Ingrese su email");
         passUser = prompt("Ingrese su contraseña");
+        celUser = prompt("Ingrese su número de celular")
     }
-    impresion(emailUser, passUser);
+    impresion(emailUser, passwordUser, celUser);
 }
 
-function impresion(emailUser, passUser) {
+validarUser(emailUser, passUser, celUser);
+
+function impresion(emailUser, passwordUser, celUser) {
     console.log("User: " + emailUser);
-    console.log("Contraseña: " + passUser);
+    console.log("Contraseña: " + passwordUser);
+    console.log("Numero: " + celUser);
     alert("Bienvenido: " + emailUser);
 }
-
-emailUser = prompt("Ingrese su email");
-passUser = prompt("Ingrese su contraseña");
-
-validarUser(emailUser, passUser);

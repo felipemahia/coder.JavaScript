@@ -84,12 +84,15 @@ total();
 // Si, es muy parecido... Ya se, y algo de culpa siento; entonces va otro, que me sirve para practicar a no robar xD:
 alert('"Me re robaste guacho" habrás pensado y tenés razón \n Solo por culpa hago otro xD ');
 
+//Bueno acá un intento de login. (Me ayudó un compañero de la camada)
+
 let emailUser, passwordUser, celUser;
 emailUser = prompt("Ingrese su email");
 passwordUser = prompt("Ingrese su contraseña");
+celUser = prompt("Ingrese su número de celular")
 
 function validarUser(emailUser, passwordUser) {
-    while (emailUser == "" || passwordUser == "" || celUser == "") {
+    while (emailUser == "" || celUser == "" && passwordUser == "") {
         alert("Tiene que ingresar un email y/o una contraseña");
         emailUser = prompt("Ingrese su email");
         passUser = prompt("Ingrese su contraseña");
@@ -104,5 +107,5 @@ function impresion(emailUser, passwordUser, celUser) {
     console.log("User: " + emailUser);
     console.log("Contraseña: " + passwordUser);
     console.log("Numero: " + celUser);
-    alert("Bienvenido: " + emailUser);
+    alert("Bienvenido a VapeLife: " + emailUser);
 }

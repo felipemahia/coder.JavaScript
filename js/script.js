@@ -6,12 +6,7 @@ if (edad >= 18) {
     alert('Afuera chiquito!')
 }
 
-function saludarEze() { //ya se que no era necesaria una función, con un alert daba y sobraba, pero quería probar// 
-    alert('Buenas Eze, dale al enter y pasamos a una función zarpada (???) \n si, basada en lo que pasaste al chat grupal de coder xD');
-}
-saludarEze();
-
-let ingreso = prompt("Bienvenido a VapeLife, qué estás buscando? \n1- Equipo\n2- Atomizador\n3- E-Liquids\n4- Salir")
+/* let ingreso = prompt("Bienvenido a VapeLife, qué estás buscando? \n1- Equipo\n2- Atomizador\n3- E-Liquids\n4- Salir")
 let totalVapeLife = 0
 
 function compra(parametro) {
@@ -46,45 +41,8 @@ while (ingreso != "4") {//
 
     console.log(ingreso)
 
-}  
-
-total(); 
-
-//ACÁ ME GUSTARÍA QUE SE MOSTRARA EL PRECIO "GASTADO" DIGAMOS, PERO NO SÉ CÓMO.
-
-
-
-
-// SI PRIMERO LEES EL CÓDIO:
-// ES IMPORTANTE QUE VAYAS AL LIVESERVER ANTES DE SEGUIR SCROLLEANDO
-// SI FUISTE DE UNA AL LIVESERVER IGNORÁ ESTO :)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Si, es muy parecido... Ya se, y algo de culpa siento; entonces va otro, que me sirve para practicar a no robar xD:
-alert('"Me re robaste guacho" habrás pensado y tenés razón \n Solo por culpa hago otro xD ');
-
-//Bueno acá un intento de login. (Me ayudó un compañero de la camada)
+}
+alert('El monto total de su compra es de ' + totalVapeLife) */
 
 let emailUser, passwordUser, celUser;
 emailUser = prompt("Ingrese su email");
@@ -109,3 +67,65 @@ function impresion(emailUser, passwordUser, celUser) {
     console.log("Numero: " + celUser);
     alert("Bienvenido a VapeLife: " + emailUser);
 }
+
+// Objetos
+
+class Equipos {
+    constructor(marca, modelo, precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+        this.stock = true;
+    }
+    sumarImportacion() {
+        this.precio = this.precio * 1.8
+    }
+}
+
+class Atomizadores {
+    constructor(marca, modelo, precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+        this.stock = true;
+    }
+    sumarImportacion() {
+        this.precio = this.precio * 1.8
+    }
+}
+class Eliquids {
+    constructor(marca, nombre, precio) {
+        this.marca = marca;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = true;
+    }
+    sumarImportacion() {
+        this.precio = this.precio * 1.8
+    }
+}
+//Equipos para principiantes
+const equipoPrincipiantes1 = new Equipos(SMOK, nord4, 1100)
+const equipoPrincipiantes2 = new Equipos(SMOK, vapePen22, 1500)
+const equipoPrincipiantes3 = new Equipos(SMOK, stickPrince, 2000)
+const equipoPrincipiantes4 = new Equipos(Vaporesso, skySolo, 2000)
+const equipoPrincipiantes5 = new Equipos(Joytech, exceed, 1800)
+const equipoPrincipiantes6 = new Equipos(Vaporesso, pod, 1100)
+
+const equipoIntermedio1 = new Equipos(Voopoo, dragXPlus, 2200)
+const equipoIntermedio2 = new Equipos(Geekvape, aegisMax, 2500)
+const equipoIntermedio3 = new Equipos(Geekvape, boostPro, 2100)
+const equipoIntermedio4 = new Equipos(Vaporesso, genS, 2800)
+
+//const equipo
+
+//PREGUNTA: me conviene hacer dos constructores, o mejor hacer uno solo y separar Equipos, Atomizadores y etc según su categoría?
+//porque en realidad, dentro de EQUIPOS hay equipos más para pro y otros más sencillos, entonces no sé qué me convendrá.
+//y solo menciono Atomizadores y Equipos porque en realidad son los que comparten el 100% de las características.
+
+// Faltan varios equipos, y obvio varios atomizadores, pero poco a poco (????) 
+
+
+
+//Arrays
+

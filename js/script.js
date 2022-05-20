@@ -1,10 +1,10 @@
-let edad = prompt("Ingresá tu edad");
+/* let edad = prompt("Ingresá tu edad");
 
 if (edad >= 18) {
     alert('Puede ingresar');
 } else {
     alert('Afuera chiquito!')
-}
+} */
 
 /* let ingreso = prompt("Bienvenido a VapeLife, qué estás buscando? \n1- Equipo\n2- Atomizador\n3- E-Liquids\n4- Salir")
 let totalVapeLife = 0
@@ -46,17 +46,17 @@ alert('El monto total de su compra es de ' + totalVapeLife) */
 
 let emailUser, passwordUser, celUser;
 emailUser = prompt("Ingrese su email");
-passwordUser = prompt("Ingrese su contraseña");
 celUser = prompt("Ingrese su número de celular")
+passUser = prompt("Ingrese su contraseña");
 
-function validarUser(emailUser, passwordUser) {
-    while (emailUser == "" || celUser == "" && passwordUser == "") {
+function validarUser(emailUser, celUser, passUser) {
+    while (emailUser == "" || celUser == "" && passUser == "") {
         alert("Tiene que ingresar un email y/o una contraseña");
         emailUser = prompt("Ingrese su email");
-        passUser = prompt("Ingrese su contraseña");
         celUser = prompt("Ingrese su número de celular")
+        passUser = prompt("Ingrese su contraseña");
     }
-    impresion(emailUser, passwordUser, celUser);
+    impresion(emailUser, passUser, celUser);
 }
 
 validarUser(emailUser, passUser, celUser);
@@ -68,14 +68,13 @@ function impresion(emailUser, passwordUser, celUser) {
     alert("Bienvenido a VapeLife: " + emailUser);
 }
 
-// Objetos
+// Objetos (acá vas a ver Eze lo que te preguntaba para la entrega de Arrays)
 
 class Equipos {
     constructor(marca, modelo, precio) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.precio = precio;
-        this.stock = true;
+        this.marca = marca.toUpperCase();
+        this.modelo = modelo.toUpperCase();
+        this.precio = precio.toUpperCase();
     }
     sumarImportacion() {
         this.precio = this.precio * 1.8
@@ -84,10 +83,9 @@ class Equipos {
 
 class Atomizadores {
     constructor(marca, modelo, precio) {
-        this.marca = marca;
-        this.modelo = modelo;
+        this.marca = marca.toUpperCase();
+        this.modelo = modelo.toUpperCase();
         this.precio = precio;
-        this.stock = true;
     }
     sumarImportacion() {
         this.precio = this.precio * 1.8
@@ -95,37 +93,62 @@ class Atomizadores {
 }
 class Eliquids {
     constructor(marca, nombre, precio) {
-        this.marca = marca;
-        this.nombre = nombre;
+        this.marca = marca.toUpperCase();
+        this.nombre = nombre.toUpperCase();
         this.precio = precio;
-        this.stock = true;
     }
     sumarImportacion() {
         this.precio = this.precio * 1.8
     }
 }
 //Equipos para principiantes
-const equipoPrincipiantes1 = new Equipos(SMOK, nord4, 1100)
-const equipoPrincipiantes2 = new Equipos(SMOK, vapePen22, 1500)
-const equipoPrincipiantes3 = new Equipos(SMOK, stickPrince, 2000)
-const equipoPrincipiantes4 = new Equipos(Vaporesso, skySolo, 2000)
-const equipoPrincipiantes5 = new Equipos(Joytech, exceed, 1800)
-const equipoPrincipiantes6 = new Equipos(Vaporesso, pod, 1100)
+const equipoPrincipiantes1 = new Equipos('SMOK', 'nord4', 1100)
+const equipoPrincipiantes2 = new Equipos('SMOK', 'vapePen22', 1500)
+const equipoPrincipiantes3 = new Equipos('SMOK', 'stickPrince', 2000)
+const equipoPrincipiantes4 = new Equipos('Vaporesso', 'skySolo', 2000)
+const equipoPrincipiantes5 = new Equipos('Joytech', 'exceed', 1800)
+const equipoPrincipiantes6 = new Equipos('Vaporesso', 'pod', 1100)
 
-const equipoIntermedio1 = new Equipos(Voopoo, dragXPlus, 2200)
-const equipoIntermedio2 = new Equipos(Geekvape, aegisMax, 2500)
-const equipoIntermedio3 = new Equipos(Geekvape, boostPro, 2100)
-const equipoIntermedio4 = new Equipos(Vaporesso, genS, 2800)
+//Equipos intermedios
+const equipoIntermedio1 = new Equipos('Voopoo', 'dragXPlus', 2200)
+const equipoIntermedio2 = new Equipos('Geekvape', 'aegisMax', 2500)
+const equipoIntermedio3 = new Equipos('Geekvape', 'boostPro', 2100)
+const equipoIntermedio4 = new Equipos('Vaporesso', 'genS', 2800)
 
-//const equipo
+//Equipos pro
+const equipoPro1 = new Equipos('Ehpro', 'armor', 2500)
+const equipoPro2 = new Equipos('Geekvape', 'drag3', 3000)
+const equipoPro3 = new Equipos('Vaporesso', 'luxe', 3000)
+const equipoPro4 = new Equipos('Desire', 'cut', 2800)
+const equipoPro5 = new Equipos('Augvape', 'vx217', 2800)
+const equipoPro6 = new Equipos('Hellvape', 'arez', 2800)
+
+equipoIntermedio4.sumarImportacion();
+console.log(equipoIntermedio4.precio);
 
 //PREGUNTA: me conviene hacer dos constructores, o mejor hacer uno solo y separar Equipos, Atomizadores y etc según su categoría?
 //porque en realidad, dentro de EQUIPOS hay equipos más para pro y otros más sencillos, entonces no sé qué me convendrá.
 //y solo menciono Atomizadores y Equipos porque en realidad son los que comparten el 100% de las características.
 
-// Faltan varios equipos, y obvio varios atomizadores, pero poco a poco (????) 
+// Faltan los atomizadores y los equipos, pero paré por la duda que te plantee y no lo borré porque imagino que me podrá servir para la primera entrega final(actualización 2hs después: Si me sirve que estén ahí mientras los paso a arrays (; ).
+
+//Si para esa entrega primera entrega final esto sigue acá, hay tabla XD
 
 
 
-//Arrays
 
+
+//ARRAYS
+
+const arrayCarrito = [];
+
+const arrayEquiposPrincipiantes = [];
+arrayEquiposPrincipiantes.push(new Equipos('SMOK', 'nord4', 1100));
+arrayEquiposPrincipiantes.push(new Equipos('SMOK', 'vapePen22', 1500));
+arrayEquiposPrincipiantes.push(new Equipos('SMOK', 'stickPrince', 2000));
+arrayEquiposPrincipiantes.push(new Equipos('Vaporesso', 'skySolo', 2000));
+arrayEquiposPrincipiantes.push(new Equipos('Joytech', 'exceed', 1800));
+arrayEquiposPrincipiantes.push(new Equipos('Vaporesso', 'pod', 1100));
+for (const Equipos of arrayEquiposPrincipiantes) {
+    Equipos.sumarImportacion();
+}

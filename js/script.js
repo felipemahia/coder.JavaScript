@@ -115,41 +115,118 @@ const catalogoEquipos = [
     {
         id: 1,
         marca: 'SMOK',
-        modelo: 'Nord 4',
+        modelo: 'nord4',
         precio: 1100,
+        categoria: 'principiante'
     },
     {
         id: 2,
         marca: 'SMOK',
-        modelo: 'VapePen 22',
+        modelo: 'vapePen22',
         precio: 1500,
+        categoria: 'principiante',
     },
     {
         id: 3,
         marca: 'SMOK',
-        modelo: 'Stick Prince',
+        modelo: 'stickPrince',
         precio: 2000,
+        categoria: 'principiante',
     },
     {
         id: 4,
         marca: 'Vaporesso',
-        modelo: 'Sky Solo',
+        modelo: 'skySolo',
         precio: 2000,
+        categoria: 'principiante',
     },
     {
         id: 5,
         marca: 'Joytech',
-        modelo: 'Exceed',
+        modelo: 'exceed',
         precio: 1800,
+        categoria: 'principiante',
     },
     {
         id: 6,
         marca: 'Vaporesso',
-        modelo: 'Pod',
+        modelo: 'pod',
         precio: 1100,
-
+        categoria: 'principiante'
     },
-];
+    {
+        id: 7,
+        marca: 'Voopoo',
+        modelo: 'dragXPlus',
+        precio: 2200,
+        categoria: 'avanzados'
+    },
+
+    {
+        id: 8,
+        marca: 'Geekvape',
+        modelo: 'aegisMax',
+        precio: 2500,
+        categoria: 'avanzados'
+    },
+    {
+        id: 9,
+        marca: 'Geekvape',
+        modelo: 'boostPro',
+        precio: 2100,
+        categoria: 'avanzados'
+    },
+    {
+        id: 10,
+        marca: 'Vaporesso',
+        modelo: 'genS',
+        precio: 2800,
+        categoria: 'avanzados'
+    },
+
+    {
+        id: 11,
+        marca: 'Ehpro',
+        modelo: 'armor',
+        precio: 2500,
+        categoria: 'pro'
+    },
+    {
+        id: 12,
+        marca: 'Geekvape',
+        modelo: 'drag3',
+        precio: 3000,
+        categoria: 'pro'
+    },
+    {
+        id: 13,
+        marca: 'Vaporesso',
+        modelo: 'luxe',
+        precio: 3000,
+        categoria: 'pro'
+    },
+    {
+        id: 14,
+        marca: 'Desire',
+        modelo: 'cut',
+        precio: 2800,
+        categoria: 'pro'
+    },
+    {
+        id: 15,
+        marca: 'Augvape',
+        modelo: 'vx217',
+        precio: 2800,
+        categoria: 'pro'
+    },
+    {
+        id: 16,
+        marca: 'Hellvape',
+        modelo: 'arez',
+        precio: 2800,
+        catalogo: 'pro'
+    },
+]
 
 const Carrito = [];
 
@@ -188,9 +265,9 @@ const eliminarProductos = () => {
         list += index++ + '-' + Equipo.marca + '-' + Equipo.modelo + '\n';
     }
 
-    let opcion = parseInt (prompt(list));
+    let opcion = parseInt(prompt(list));
     Carrito.splice(opcion - 1, 1)
-    alert ('Producto eliminado')
+    alert('Producto eliminado')
 }
 
 let menu = '';

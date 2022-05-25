@@ -187,7 +187,7 @@ const catalogoEquipos = [
         marca: 'Hellvape',
         modelo: 'arez',
         precio: 2800,
-        catalogo: 'pro',
+        categoria: 'pro',
     }
 ]
 
@@ -269,7 +269,7 @@ while (true) {
 let criterioDeOrden = parseInt(prompt('Elegí cómo queres ordenar los productos:\n 1 - Por marca\n 2 - Por precio ascendente\n 3 - Por precio descendente\n  4 - Por categoría\n'))
 
 function ordenar(criterioDeOrden, array) {
-    let arrayOrdenado = array.slice(0);
+    let arrayOrdenado = array;
 
     switch (criterioDeOrden) {
         case 1:
@@ -282,8 +282,8 @@ function ordenar(criterioDeOrden, array) {
             let precioDescendente = arrayOrdenado.sort((a, b) => b.precio - a.precio);
             return precioDescendente;
         case 4:
-            let categoria = arrayOrdenado.sort((a, b) => a.categoria.localeCompare(b.titulo));
-            return categoria;
+            let porCategoria = arrayOrdenado.sort((a, b) => a.categoria.localeCompare(b.categoria));
+            return porCategoria;
         default:
             alert('No es un criterio válido');
             break;

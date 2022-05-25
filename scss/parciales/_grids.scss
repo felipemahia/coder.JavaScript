@@ -1,0 +1,63 @@
+/* .gridPromoContenedor {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: stretch;
+    position: relative;
+    grid-column-gap: 16px;
+    grid-template-areas: 
+    "promoUno promoChica1"
+    "promoUno promoChica2";
+}
+ */
+.grid__promoUno {
+    grid-area: promoUno;
+    margin: 0%;
+    position: relative;
+}
+
+.grid__promoChica1{
+    grid-area: promoChica1;
+    margin: 0%;
+    position: relative;
+    align-self: start;
+}
+.grid__promoChica2{
+    grid-area: promoChica2;
+    margin: 0%;
+    position: relative;
+    align-self: end;
+}
+
+.grid-section {
+    display: grid;
+    margin-top: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem;
+    grid-template-areas: 
+    "grid__equipos"
+    "grid__atomizadores"
+    "grid__eliquids";
+}
+
+.grid__equipos {
+    display: grid;
+    grid-area: grid__equipos;
+}
+
+.grid__atomizadores {
+    display: grid;
+    grid-area: grid__atomizadores;
+}
+
+.grid__eliquids {
+    display: grid;
+    grid-area: grid__liquids;
+}
+.grid__item{
+    padding: 10px;
+}

@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'MetropolisRegular';
+    background-image: $bg-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+p { 
+    color: $color-gris-muyoscuro;
+    font-family: 'MetropolisRegular';
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    margin-top: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-size: bold;
+    color: $color-gris-oscuro;
+}
+.container-fluid{
+    padding: 0px;
+}
+.MiFuente{
+    font-family: 'brushield', sans-serif;
+    font-size: 45px;
+}
+.separador{
+    background-image: url(../imagenes/wp4332186.jpg);
+    padding: 1rem;
+    color: white;
+}
+.negrita{
+    font-weight: bold;
+}
+.col,.col-md-3, .col-md-4, .col-md-6{
+    margin-bottom: 20px;
+}
+.row {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+.row-cols-md-2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.italica{
+    font-style: italic;
+    padding: 1.5rem 8rem 1.5rem 8rem;
+    text-align: justify;
+    text-align-last: left;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule:4px solid $color-gris;
+}
+.img-fluid{
+    transition: transform 1s;
+}
+.img-fluid:hover{
+    transform: scale(1.1);
+
+}
+.card{
+    height: $card-height;
+    overflow: hidden;
+    padding: 1rem;
+    max-height: fit-content;
+}
+.card-img-top{
+    width: auto;
+}
+.card-title{
+    size: 20px;
+    text-align: center;
+}
+.card-text {
+    font-size: 16px;
+    text-align: justify;
+    text-align-last: center;
+}
+.cardflex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.accordion{
+    padding: 0rem 6rem 2rem 6rem;
+}
+.accordion-button{
+    width: 100%;
+    padding: 10px;
+}
+.accordion-txt{
+    text-align: justify;
+    text-align-last: left;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule:4px solid $color-gris;
+}
+.accordion-header{
+    text-align: center;
+    color: $color-gris-muyoscuro;
+}
+.btn-primary{
+    font-size: 12px;
+}
+.btn-outline-danger{
+    font-size: 12px;
+    line-height: auto;
+}
+#align-item-center{
+    align-items: center;
+}
+
+.text-center {
+    color: $color-gris;
+    text-align: justify;
+}
+#cerrarsidebar {
+    display: none;
+}
+.botonhamburguesa {
+    display: none;
+}
+.container {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+#centrar{
+    font-style: italic;
+    padding: 1.5rem 8rem 1.5rem 8rem;
+    text-align: justify;
+    text-align-last: center;
+    column-count: 1;
+    column-gap: 2rem;
+    column-rule:4px solid $color-gris;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.solomobile{
+    display: none;
+}
+.iframecontacto{
+    padding: 1rem;
+}

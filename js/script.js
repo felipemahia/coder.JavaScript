@@ -30,83 +30,48 @@ function impresion(emailUser, passwordUser, celUser) {
     alert("Bienvenido a VapeLife: " + emailUser);
 } */
 
-// Objetos (acá vas a ver Eze lo que te preguntaba para la entrega de Arrays)
+//  /////////////////////////VOS ME DECÍS QUE ESTO DE ACÁ ABAJO (de la línea 36 a la 69) \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-/* class Equipos {
-    constructor(marca, modelo, precio, id) {
+/*
+class Equipos {
+    constructor(id, marca, modelo, precio, categoria) {
+        this.id = id
         this.marca = marca.toUpperCase();
         this.modelo = modelo.toUpperCase();
         this.precio = precio;
-        this.id = id;
+        this.categoria = categoria.toUpperCase();
+        ;
     }
 
     sumarImportacion() {
         this.precio = this.precio * 1.8
     }
-
-    asignarId(array) {
-        this.id = array.length;
-    }
 }
-
-class Atomizadores {
-    constructor(marca, modelo, precio) {
-        this.marca = marca.toUpperCase();
-        this.modelo = modelo.toUpperCase();
-        this.precio = precio;
-    }
-    sumarImportacion() {
-        this.precio = this.precio * 1.8
-    }
-}
-class Eliquids {
-    constructor(marca, nombre, precio) {
-        this.marca = marca.toUpperCase();
-        this.nombre = nombre.toUpperCase();
-        this.precio = precio;
-    }
-    sumarImportacion() {
-        this.precio = this.precio * 1.8
-    }
-}
+const Equipos = []
 //Equipo para principiantes
-/* const equiposPrincipiantes = [
-    new Equipos('SMOK', 'nord4', 1100, 1),
-    new Equipos('SMOK', 'vapePen22', 1500, 2),
-    new Equipos('SMOK', 'stickPrince', 2000, 3),
-    new Equipos('Vaporesso', 'skySolo', 2000, 4),
-    new Equipos('Joytech', 'exceed', 1800, 5),
-    new Equipos('Vaporesso', 'pod', 1100, 6)
-]
-console.log(equiposPrincipiantes);
-//Equipo intermedios
-const equiposIntermedios = [
-    new Equipos('Voopoo', 'dragXPlus', 2200, 7),
-    new Equipos('Geekvape', 'aegisMax', 2500, 8),
-    new Equipos('Geekvape', 'boostPro', 2100, 9),
-    new Equipos('Vaporesso', 'genS', 2800, 10)
-]
-console.log(equiposIntermedios);
+    Equipos.push(new Equipos(1, 'SMOK', 'nord4', 1100, 'principiantes'));
+    Equipos.push(new Equipos(2, 'SMOK', 'vapePen22', 1500, 'principiantes'));
+    Equipos.push(new Equipos(3, 'SMOK', 'stickPrince', 2000, 'principiantes'));
+    Equipos.push(new Equipos(4, 'Vaporesso', 'skySolo', 2000, 'principiantes'));
+    Equipos.push(new Equipos(5, 'Joytech', 'exceed', 1800, 'principiantes'));
+    Equipos.push(new Equipos(6, 'Vaporesso', 'pod', 1100, 'principiantes'));
+//Equipo avanzados
+    Equipos.push(new Equipos(7, 'Voopoo', 'dragXPlus', 2200, 'avanzados'));
+    Equipos.push(new Equipos(8, 'Geekvape', 'aegisMax', 2500, 'avanzados'));
+    Equipos.push(new Equipos(9, 'Geekvape', 'boostPro', 2100, 'avanzados'));
+    Equipos.push(new Equipos(10, 'Vaporesso', 'genS', 2800, 'avanzados'));
 //Equipos pro
-const equiposPro = [
-    new Equipos('Ehpro', 'armor', 2500, 11),
-    new Equipos('Geekvape', 'drag3', 3000, 12),
-    new Equipos('Vaporesso', 'luxe', 3000, 13),
-    new Equipos('Desire', 'cut', 2800, 14),
-    new Equipos('Augvape', 'vx217', 2800, 15),
-    new Equipos('Hellvape', 'arez', 2800, 16)
-]
-console.log(equiposPro); */
+    Equipos.push(new Equipos(11, 'Ehpro', 'armor', 2500, 'pro'));
+    Equipos.push(new Equipos(12, 'Geekvape', 'drag3', 3000, 'pro'));
+    Equipos.push(new Equipos(13, 'Vaporesso', 'luxe', 3000, 'pro'));
+    Equipos.push(new Equipos(14, 'Desire', 'cut', 2800, 'pro'));
+    Equipos.push(new Equipos(15, 'Augvape', 'vx217', 2800, 'pro'));
+    Equipos.push(new Equipos(16, 'Hellvape', 'arez', 2800, 'pro'));
+
+console.log(Equipos); */
 
 
-
-//PREGUNTA: me conviene hacer dos constructores, o mejor hacer uno solo y separar Equipos, Atomizadores y etc según su categoría?
-//porque en realidad, dentro de EQUIPOS hay equipos más para pro y otros más sencillos, entonces no sé qué me convendrá.
-//y solo menciono Atomizadores y Equipos porque en realidad son los que comparten el 100% de las características.
-
-// Faltan los atomizadores y los equipos, pero paré por la duda que te plantee y no lo borré porque imagino que me podrá servir para la primera entrega final(actualización 2hs después: Si me sirve que estén ahí mientras los paso a arrays (; ).
-
-
+//ES EXACTAMENTE IGUAL QUE LO QUE VA DE LA LINEA 78 A LA 193?????? O igual tengo que agregarle el push? Sigue sin quedarme claro esto, no puedo creerlo.
 
 
 
@@ -117,7 +82,7 @@ const catalogoEquipos = [
         marca: 'SMOK',
         modelo: 'nord4',
         precio: 1100,
-        categoria: 'principiante'
+        categoria: 'principiante',
     },
     {
         id: 2,
@@ -152,80 +117,78 @@ const catalogoEquipos = [
         marca: 'Vaporesso',
         modelo: 'pod',
         precio: 1100,
-        categoria: 'principiante'
+        categoria: 'principiante',
     },
     {
         id: 7,
         marca: 'Voopoo',
         modelo: 'dragXPlus',
         precio: 2200,
-        categoria: 'avanzados'
+        categoria: 'avanzados',
     },
-
     {
         id: 8,
         marca: 'Geekvape',
         modelo: 'aegisMax',
         precio: 2500,
-        categoria: 'avanzados'
+        categoria: 'avanzados',
     },
     {
         id: 9,
         marca: 'Geekvape',
         modelo: 'boostPro',
         precio: 2100,
-        categoria: 'avanzados'
+        categoria: 'avanzados',
     },
     {
         id: 10,
         marca: 'Vaporesso',
         modelo: 'genS',
         precio: 2800,
-        categoria: 'avanzados'
+        categoria: 'avanzados',
     },
-
     {
         id: 11,
         marca: 'Ehpro',
         modelo: 'armor',
         precio: 2500,
-        categoria: 'pro'
+        categoria: 'pro',
     },
     {
         id: 12,
         marca: 'Geekvape',
         modelo: 'drag3',
         precio: 3000,
-        categoria: 'pro'
+        categoria: 'pro',
     },
     {
         id: 13,
         marca: 'Vaporesso',
         modelo: 'luxe',
         precio: 3000,
-        categoria: 'pro'
+        categoria: 'pro',
     },
     {
         id: 14,
         marca: 'Desire',
         modelo: 'cut',
         precio: 2800,
-        categoria: 'pro'
+        categoria: 'pro',
     },
     {
         id: 15,
         marca: 'Augvape',
         modelo: 'vx217',
         precio: 2800,
-        categoria: 'pro'
+        categoria: 'pro',
     },
     {
         id: 16,
         marca: 'Hellvape',
         modelo: 'arez',
         precio: 2800,
-        catalogo: 'pro'
-    },
+        catalogo: 'pro',
+    }
 ]
 
 const Carrito = [];
@@ -233,7 +196,7 @@ const Carrito = [];
 const agregarProducto = () => {
     let list = 'Seleccioná el producto que desees \n';
     for (const Equipo of catalogoEquipos) {
-        list += Equipo.id + '-' + Equipo.marca + '-' + Equipo.modelo + '\n'
+        list += Equipo.id + ' - ' + Equipo.marca + ' - ' + Equipo.modelo + ' - ' + Equipo.precio + ' pesos' + '\n'
     }
     let productoSeleccionado = parseInt(prompt(list));
     for (const element of catalogoEquipos) {
@@ -252,7 +215,7 @@ const verCarrito = () => {
     let list = 'Tu carrito tiene lo siguiente: \n';
     let index = 1;
     for (const Equipo of Carrito) {
-        list += index++ + '-' + Equipo.marca + '-' + Equipo.modelo + '\n';
+        list += index++ + ' - ' + Equipo.marca + ' - ' + Equipo.modelo + ' - ' + Equipo.precio + '\n';
     }
 
     alert(list);
@@ -262,7 +225,7 @@ const eliminarProductos = () => {
     let list = 'Tu carrito tiene lo siguiente: \n';
     let index = 1;
     for (const Equipo of Carrito) {
-        list += index++ + '-' + Equipo.marca + '-' + Equipo.modelo + '\n';
+        list += index++ + ' - ' + Equipo.marca + ' - ' + Equipo.modelo + '\n';
     }
 
     let opcion = parseInt(prompt(list));
@@ -303,3 +266,41 @@ while (true) {
     }
 }
 
+let criterioDeOrden = parseInt(prompt('Elegí cómo queres ordenar los productos:\n 1 - Por marca\n 2 - Por precio ascendente\n 3 - Por precio descendente\n  4 - Por categoría\n'))
+
+function ordenar(criterioDeOrden, array) {
+    let arrayOrdenado = array.slice(0);
+
+    switch (criterioDeOrden) {
+        case 1:
+            let marcaAscendente = arrayOrdenado.sort((a, b) => a.marca.localeCompare(b.marca));
+            return marcaAscendente;
+        case 2:
+            let precioAscendente = arrayOrdenado.sort((a, b) => a.precio - b.precio);
+            return precioAscendente;
+        case 3:
+            let precioDescendente = arrayOrdenado.sort((a, b) => b.precio - a.precio);
+            return precioDescendente;
+        case 4:
+            let categoria = arrayOrdenado.sort((a, b) => a.categoria.localeCompare(b.titulo));
+            return categoria;
+        default:
+            alert('No es un criterio válido');
+            break;
+    }
+}
+
+
+function mostrar (array){
+    let info = '';
+    array.forEach(element => {
+        info += 'Marca: ' + element.marca + '\nModelo: ' + element.modelo + '\nPrecio: ' + element.precio + 'pesos' + '\nCategoria: ' + element.categoria + '\n \n' 
+    });
+    return info;
+}
+
+//console.log((mostrar(ordenar(criterioDeOrden, catalogoEquipos))));
+
+alert(mostrar(ordenar(criterioDeOrden, catalogoEquipos)));
+
+console.log(catalogoEquipos)

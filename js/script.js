@@ -30,16 +30,16 @@ function impresion(emailUser, passwordUser, celUser) {
     alert("Bienvenido a VapeLife: " + emailUser);
 } */
 
-//  /////////////////////////VOS ME DECÍS QUE ESTO DE ACÁ ABAJO (de la línea 36 a la 69) \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-/*
+
 class Equipos {
-    constructor(id, marca, modelo, precio, categoria) {
+    constructor(id, marca, modelo, precio, categoria, img) {
         this.id = id
         this.marca = marca.toUpperCase();
         this.modelo = modelo.toUpperCase();
         this.precio = precio;
         this.categoria = categoria.toUpperCase();
+        this.img = img;
         ;
     }
 
@@ -47,151 +47,108 @@ class Equipos {
         this.precio = this.precio * 1.8
     }
 }
-const Equipos = []
+const catalogoEquipos = []
+
+//const equiposPrincipiantes = catalogoEquipos.slice(1,6); Por qué no funcionó? Abajo hice el consolelog.
+
 //Equipo para principiantes
-    Equipos.push(new Equipos(1, 'SMOK', 'nord4', 1100, 'principiantes'));
-    Equipos.push(new Equipos(2, 'SMOK', 'vapePen22', 1500, 'principiantes'));
-    Equipos.push(new Equipos(3, 'SMOK', 'stickPrince', 2000, 'principiantes'));
-    Equipos.push(new Equipos(4, 'Vaporesso', 'skySolo', 2000, 'principiantes'));
-    Equipos.push(new Equipos(5, 'Joytech', 'exceed', 1800, 'principiantes'));
-    Equipos.push(new Equipos(6, 'Vaporesso', 'pod', 1100, 'principiantes'));
+catalogoEquipos.push(new Equipos(1, 'SMOK', 'nord4', 1100, 'principiantes', "./imagenes/1 Principiantes/Nord Pod/1.jpg"))
+catalogoEquipos.push(new Equipos(2, 'SMOK', 'vapePen22', 1500, 'principiantes', "./imagenes/1 Principiantes/VapePen 22/1.jpg"))
+catalogoEquipos.push(new Equipos(3, 'SMOK', 'stickPrince', 2000, 'principiantes', "./imagenes/1 Principiantes/Smok Stick Prince/1.jpg"))
+catalogoEquipos.push(new Equipos(4, 'Vaporesso', 'skySolo', 2000, 'principiantes', "./imagenes/1 Principiantes/Sky Solo/1.jpg"))
+catalogoEquipos.push(new Equipos(5, 'Joytech', 'exceed', 1800, 'principiantes', "./imagenes/1 Principiantes/Joyctech exceed grip/1.jpg"))
+catalogoEquipos.push(new Equipos(6, 'Vaporesso', 'pod', 1100, 'principiantes', "./imagenes/1 Principiantes/Vaporesso Pod/1.jpg"))
 //Equipo avanzados
-    Equipos.push(new Equipos(7, 'Voopoo', 'dragXPlus', 2200, 'avanzados'));
-    Equipos.push(new Equipos(8, 'Geekvape', 'aegisMax', 2500, 'avanzados'));
-    Equipos.push(new Equipos(9, 'Geekvape', 'boostPro', 2100, 'avanzados'));
-    Equipos.push(new Equipos(10, 'Vaporesso', 'genS', 2800, 'avanzados'));
+catalogoEquipos.push(new Equipos(7, 'Voopoo', 'dragXPlus', 2200, 'avanzados', "./imagenes/2 Avanzados/Kit voopoo drag 3/1.jpg"))
+catalogoEquipos.push(new Equipos(8, 'Geekvape', 'aegisMax', 2500, 'avanzados', "./imagenes/2 Avanzados/Kit Aegis Max/1.jpg"))
+catalogoEquipos.push(new Equipos(9, 'Geekvape', 'boostPro', 2100, 'avanzados', "./imagenes/2 Avanzados/Aegis Boost+/1.jpg"))
+catalogoEquipos.push(new Equipos(10, 'Vaporesso', 'genS', 2800, 'avanzados', "./imagenes/2 Avanzados/Vaporesso Gen S/1.jpg"))
 //Equipos pro
-    Equipos.push(new Equipos(11, 'Ehpro', 'armor', 2500, 'pro'));
-    Equipos.push(new Equipos(12, 'Geekvape', 'drag3', 3000, 'pro'));
-    Equipos.push(new Equipos(13, 'Vaporesso', 'luxe', 3000, 'pro'));
-    Equipos.push(new Equipos(14, 'Desire', 'cut', 2800, 'pro'));
-    Equipos.push(new Equipos(15, 'Augvape', 'vx217', 2800, 'pro'));
-    Equipos.push(new Equipos(16, 'Hellvape', 'arez', 2800, 'pro'));
-
-console.log(Equipos); */
-
-
-//ES EXACTAMENTE IGUAL QUE LO QUE VA DE LA LINEA 78 A LA 193?????? O igual tengo que agregarle el push? Sigue sin quedarme claro esto, no puedo creerlo.
+catalogoEquipos.push(new Equipos(11, 'Ehpro', 'armor', 2500, 'pro', "./imagenes/3 Pro/Equipo pro 1.jpg"))
+catalogoEquipos.push(new Equipos(12, 'Geekvape', 'drag3', 3000, 'pro', "./imagenes/3 Pro/Equipo pro 2.jpg"))
+catalogoEquipos.push(new Equipos(13, 'Vaporesso', 'luxe', 3000, 'pro', "./imagenes/3 Pro/Equipo pro 3.jpg"))
+catalogoEquipos.push(new Equipos(14, 'Desire', 'cut', 2800, 'pro', "./imagenes/3 Pro/Equipo pro 4.jpg"))
+catalogoEquipos.push(new Equipos(15, 'Augvape', 'vx217', 2800, 'pro', "./imagenes/3 Pro/Equipo pro 5.jpg"))
+catalogoEquipos.push(new Equipos(16, 'Hellvape', 'arez', 2800, 'pro', "./imagenes/3 Pro/Equipo pro 6.jpg"))
 
 
 
+console.log(catalogoEquipos);
+//console.log(equiposPrincipiantes); Esto no me hizo el slice y no se por qué
 
-const catalogoEquipos = [
-    {
-        id: 1,
-        marca: 'SMOK',
-        modelo: 'nord4',
-        precio: 1100,
-        categoria: 'principiante',
-    },
-    {
-        id: 2,
-        marca: 'SMOK',
-        modelo: 'vapePen22',
-        precio: 1500,
-        categoria: 'principiante',
-    },
-    {
-        id: 3,
-        marca: 'SMOK',
-        modelo: 'stickPrince',
-        precio: 2000,
-        categoria: 'principiante',
-    },
-    {
-        id: 4,
-        marca: 'Vaporesso',
-        modelo: 'skySolo',
-        precio: 2000,
-        categoria: 'principiante',
-    },
-    {
-        id: 5,
-        marca: 'Joytech',
-        modelo: 'exceed',
-        precio: 1800,
-        categoria: 'principiante',
-    },
-    {
-        id: 6,
-        marca: 'Vaporesso',
-        modelo: 'pod',
-        precio: 1100,
-        categoria: 'principiante',
-    },
-    {
-        id: 7,
-        marca: 'Voopoo',
-        modelo: 'dragXPlus',
-        precio: 2200,
-        categoria: 'avanzados',
-    },
-    {
-        id: 8,
-        marca: 'Geekvape',
-        modelo: 'aegisMax',
-        precio: 2500,
-        categoria: 'avanzados',
-    },
-    {
-        id: 9,
-        marca: 'Geekvape',
-        modelo: 'boostPro',
-        precio: 2100,
-        categoria: 'avanzados',
-    },
-    {
-        id: 10,
-        marca: 'Vaporesso',
-        modelo: 'genS',
-        precio: 2800,
-        categoria: 'avanzados',
-    },
-    {
-        id: 11,
-        marca: 'Ehpro',
-        modelo: 'armor',
-        precio: 2500,
-        categoria: 'pro',
-    },
-    {
-        id: 12,
-        marca: 'Geekvape',
-        modelo: 'drag3',
-        precio: 3000,
-        categoria: 'pro',
-    },
-    {
-        id: 13,
-        marca: 'Vaporesso',
-        modelo: 'luxe',
-        precio: 3000,
-        categoria: 'pro',
-    },
-    {
-        id: 14,
-        marca: 'Desire',
-        modelo: 'cut',
-        precio: 2800,
-        categoria: 'pro',
-    },
-    {
-        id: 15,
-        marca: 'Augvape',
-        modelo: 'vx217',
-        precio: 2800,
-        categoria: 'pro',
-    },
-    {
-        id: 16,
-        marca: 'Hellvape',
-        modelo: 'arez',
-        precio: 2800,
-        categoria: 'pro',
+
+let seccionEquipos = document.getElementById('idEquipos')
+
+ 
+const cardsEquipos = (arrayEquipos) => {
+//    if (this.id < 6) { ESTE ES EL IF QUE TE COMENTABA EN EL CHAT DE LA PLATAFORMA... PERO NO ME FUNCIONÓ. TAMIBÉN MÁS ARRIBA HAY UN .SLICE, PARA SEPARAR LAS SUBCATEGORÍAS, PERO HICE CONSOLELOG Y TAMPOCO ME SALÍA, CREO QUE PORQUE ES UNA CLASE CONSTRUCTORA. PERO NO LO TENGO CLARO.
+    for (let element of arrayEquipos) {
+        let div = document.createElement('div')
+        div.className = 'col-md-4 card'
+        div.style = 'max-width: 18rem;'
+        console.log(div);
+
+        div.innerHTML = `
+
+    <img class="img-fluid" src="${element.img}" class="card-img-top" alt="Equipo de inicio, de marca smok modelo Nord 4">
+    <div class="card-body">
+    <h5 class="card-title">${element.marca} ${element.modelo}</h5>
+    <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
+    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+    </div>
+    `
+
+        seccionEquipos.append(div)
     }
-]
+    }
 
-const Carrito = [];
+
+
+cardsEquipos(catalogoEquipos);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//De aquí para abajo está comentado porque voy a fusionarlo con la entrega de Eventos. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const Carrito = [];
 
 const agregarProducto = () => {
     let list = 'Seleccioná el producto que desees \n';
@@ -291,10 +248,10 @@ function ordenar(criterioDeOrden, array) {
 }
 
 
-function mostrar (array){
+function mostrar(array) {
     let info = '';
     array.forEach(element => {
-        info += 'Marca: ' + element.marca + '\nModelo: ' + element.modelo + '\nPrecio: ' + element.precio + 'pesos' + '\nCategoria: ' + element.categoria + '\n \n' 
+        info += 'Marca: ' + element.marca + '\nModelo: ' + element.modelo + '\nPrecio: ' + element.precio + 'pesos' + '\nCategoria: ' + element.categoria + '\n \n'
     });
     return info;
 }
@@ -302,5 +259,4 @@ function mostrar (array){
 //console.log((mostrar(ordenar(criterioDeOrden, catalogoEquipos))));
 
 alert(mostrar(ordenar(criterioDeOrden, catalogoEquipos)));
-
-console.log(catalogoEquipos)
+ */

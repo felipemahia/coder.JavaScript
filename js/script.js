@@ -40,6 +40,7 @@ class Equipos {
         this.precio = precio;
         this.categoria = categoria.toUpperCase();
         this.img = img;
+        // Acá falta agregar this.descripción y agregarle la descripción de cada objeto del array.
         ;
     }
 

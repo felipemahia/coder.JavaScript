@@ -49,7 +49,7 @@ class Equipos {
 }
 const catalogoEquipos = []
 
-//const equiposPrincipiantes = catalogoEquipos.slice(1,6); Por qué no funcionó? Abajo hice el consolelog.
+
 
 //Equipo para principiantes
 catalogoEquipos.push(new Equipos(1, 'SMOK', 'nord4', 1100, 'principiantes', "./imagenes/1 Principiantes/Nord Pod/1.jpg"))
@@ -73,16 +73,49 @@ catalogoEquipos.push(new Equipos(16, 'Hellvape', 'arez', 2800, 'pro', "./imagene
 
 
 
-console.log(catalogoEquipos);
-//console.log(equiposPrincipiantes); Esto no me hizo el slice y no se por qué
+//
+const equiposPrincipiantes = catalogoEquipos.slice(0, 6);
+const equiposAvanzados = catalogoEquipos.slice(6, 10);
+const equiposPro = catalogoEquipos.slice(10, 16)
+console.log(equiposPrincipiantes);
+console.log(equiposAvanzados);
+console.log(equiposPro);
 
 
 let seccionEquipos = document.getElementById('idEquipos')
+// también podría resolverlo con un switch creo, pero lo mismo, tengo dudas de cómo se escribiría, porque estuve probando pero no me funcionó ninguna de las cosas que probé.
+const cardsEquiposPrincipiantes = (equiposPrincipiantes) => {
 
- 
-const cardsEquipos = (arrayEquipos) => {
-//    if (this.id < 6) { ESTE ES EL IF QUE TE COMENTABA EN EL CHAT DE LA PLATAFORMA... PERO NO ME FUNCIONÓ. TAMIBÉN MÁS ARRIBA HAY UN .SLICE, PARA SEPARAR LAS SUBCATEGORÍAS, PERO HICE CONSOLELOG Y TAMPOCO ME SALÍA, CREO QUE PORQUE ES UNA CLASE CONSTRUCTORA. PERO NO LO TENGO CLARO.
-    for (let element of arrayEquipos) {
+    for (let element of equiposPrincipiantes) {
+        if (element.id <= (6)) {     /* Y si bien esto me funciona, no sé cómo hacerlo para los que van de 7 a 10 y de 11 a 16. */
+            let div = document.createElement('div')
+            div.className = 'col-md-4 card'
+            div.style = 'max-width: 18rem;'
+            console.log(div);
+
+            div.innerHTML = `
+
+    <img class="img-fluid" src="${element.img}" class="card-img-top" alt="Equipo de inicio, de marca smok modelo Nord 4">
+    <div class="card-body">
+    <h5 class="card-title">${element.marca} ${element.modelo}</h5>
+    <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
+    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+    </div>
+    `
+
+            seccionEquipos.append(div)
+        }
+    }
+}
+
+
+cardsEquiposPrincipiantes(equiposPrincipiantes);
+
+const cardsEquiposAvanzados = (equiposAvanzados) => {
+
+    for (let element of equiposAvanzados) {
+        /* if (element.id > (6)){ */     /* Esto es una media solución, porque va desde el id 7 al 10, o sea, me falta un corte más */
         let div = document.createElement('div')
         div.className = 'col-md-4 card'
         div.style = 'max-width: 18rem;'
@@ -101,16 +134,39 @@ const cardsEquipos = (arrayEquipos) => {
 
         seccionEquipos.append(div)
     }
+}
+
+
+
+cardsEquiposAvanzados(equiposAvanzados)
+
+const cardsEquiposPro = (equiposPro) => {
+
+    for (let element of equiposPro) {
+        /* if (element.id > (6)){ */     /* Esto es una media solución, porque va desde el id 7 al 10, o sea, me falta un corte más */
+        let div = document.createElement('div')
+        div.className = 'col-md-4 card'
+        div.style = 'max-width: 18rem;'
+        console.log(div);
+
+        div.innerHTML = `
+
+    <img class="img-fluid" src="${element.img}" class="card-img-top" alt="Equipo de inicio, de marca smok modelo Nord 4">
+    <div class="card-body">
+    <h5 class="card-title">${element.marca} ${element.modelo}</h5>
+    <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
+    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+    </div>
+    `
+
+        seccionEquipos.append(div)
     }
+}
 
 
 
-cardsEquipos(catalogoEquipos);
-
-
-
-
-
+cardsEquiposPro(equiposPro)
 
 
 

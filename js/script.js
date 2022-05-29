@@ -2,7 +2,7 @@ let edad = prompt("Ingresá tu edad"); //Si me animo y si se aprende acá, voy a
 
 if (edad < 18) {
     alert('Afuera chiquito!')
-        window.location.href = "siEsMenor.html"  /* Lo puse así para que se pueda ir para atrás. */
+        window.location.href = "siEsMenor.html"  /* Lo puse así para que no se pueda ir para atrás, perdón si jode mucho xD. */
     
 } else {
     alert('Puede ingresar');

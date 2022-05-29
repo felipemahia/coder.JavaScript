@@ -1,18 +1,11 @@
 let edad = prompt("Ingresá tu edad"); //Si me animo y si se aprende acá, voy a hacer un login/register antes de ir a la página principal.
 
-if (edad >= 18) {
-    alert('Puede ingresar');
-    document.write("Redireccionado")
-    let pagina = "index.html"
-    function redireccionar(){
-        window.location.href = pagina
-    }
-} else {
+if (edad < 18) {
     alert('Afuera chiquito!')
-    let paginaMenores = "siEsMenor.html"
-    function redireccionarMenores(){
-        window.location.href = paginaMenores
-    }
+        window.location.href = "siEsMenor.html"  /* Lo puse así para que se pueda ir para atrás. */
+    
+} else {
+    alert('Puede ingresar');
 }
 
 /* let emailUser, passwordUser, celUser,;
@@ -90,7 +83,9 @@ const seccionEquipos = document.getElementById('idEquipos')
 const cardsEquiposPrincipiantes = (equiposPrincipiantes) => {
     for (let element of equiposPrincipiantes) {
         if (element.id <= (6)) {     /* Esto me funciona, pero no sé cómo hacerlo para los que van del ID 7 a 10 y de 11 a 16, así que le busqué otra vuelta y por eso están hechas subcategorías mediante slice en las líneas 74 a 76. 
-        No se si es mejor o peor, pero fue la solución que encontré ahora. O sea, si sacas este if anda igual. */
+        No se si es mejor o peor, pero fue la solución que encontré ahora. O sea, si sacas este if anda igual. 
+        
+        3:24 del domingo, me doy cuenta que capaz se solucionas haciendo if (Equipos.id) <=6) y ahí toma el id del class Equipos de más arriba.*/
             let div = document.createElement('div')
             div.className = 'col-md-4 card'
             div.style = 'max-width: 18rem;'
@@ -137,7 +132,7 @@ cardsEquiposAvanzados(equiposAvanzados)
 const cardsEquiposPro = (equiposPro) => {
 
     for (let element of equiposPro) {
-        /* if (element.id > (6)){ */     /* Esto es una media solución, porque va desde el id 7 al 10, o sea, me falta un corte más */
+        /* if (element.id > (6)){ */     /* Acá está el resto xD */
         let div = document.createElement('div');
         div.className = 'col-md-4 card';
         div.style = 'max-width: 18rem;,  justify-content: center';

@@ -1,12 +1,21 @@
-/* let edad = prompt("Ingresá tu edad");
+let edad = prompt("Ingresá tu edad"); //Si me animo y si se aprende acá, voy a hacer un login/register antes de ir a la página principal.
 
 if (edad >= 18) {
     alert('Puede ingresar');
+    document.write("Redireccionado")
+    let pagina = "index.html"
+    function redireccionar(){
+        window.location.href = pagina
+    }
 } else {
     alert('Afuera chiquito!')
-} */
+    let paginaMenores = "siEsMenor.html"
+    function redireccionarMenores(){
+        window.location.href = paginaMenores
+    }
+}
 
-/* let emailUser, passwordUser, celUser;
+/* let emailUser, passwordUser, celUser,;
 emailUser = prompt("Ingrese su email");
 celUser = prompt("Ingrese su número de celular")
 passUser = prompt("Ingrese su contraseña");
@@ -129,9 +138,9 @@ const cardsEquiposPro = (equiposPro) => {
 
     for (let element of equiposPro) {
         /* if (element.id > (6)){ */     /* Esto es una media solución, porque va desde el id 7 al 10, o sea, me falta un corte más */
-        let div = document.createElement('div')
-        div.className = 'col-md-4 card'
-        div.style = 'max-width: 18rem;'
+        let div = document.createElement('div');
+        div.className = 'col-md-4 card';
+        div.style = 'max-width: 18rem;,  justify-content: center';
         console.log(div);
 
         div.innerHTML = `
@@ -149,37 +158,24 @@ const cardsEquiposPro = (equiposPro) => {
 }
 cardsEquiposPro(equiposPro)
 
+// EVENTOS
 
+const btnEnviar = document.querySelector('#btnEnviar')
 
+function agradecerContacto (nombre){
+    alert (`Gracias por contactarte con VapeLife, ${nombre} \nTe responderemos a la brevedad!`)
+}
+btnEnviar.onclick = () =>{
+    let nombre = document.getElementById('fname').value;
+    agradecerContacto(nombre)
+}
 
-
-
-
-
-
-
-
+// EVENTOS
 
 
 
 
 //De aquí para abajo está comentado porque voy a fusionarlo con la entrega de Eventos. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

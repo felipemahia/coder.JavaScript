@@ -42,8 +42,16 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   display: flex;
   padding: 0px;
-  margin: 0px; }
-
+  margin: 0px;
+  justify-content: space-evenly; 
+}
+.esMenor {
+  display: flex;
+  justify-content: center;
+}
+.imgEsMenor{
+  width: 60%;
+}
 .row-cols-md-2 {
   display: flex;
   flex-wrap: wrap; }
@@ -276,7 +284,8 @@ nav ul li a:hover, nav ul li a:focus {
   justify-content: stretch;
   position: relative;
   grid-column-gap: 16px;
-  grid-template-areas: "promoUno promoChica1" "promoUno promoChica2"; }
+  grid-template-areas: "promoUno promoChica1"
+ "promoUno promoChica2"; }
 
 .grid__promoUno {
   grid-area: promoUno;
@@ -301,7 +310,9 @@ nav ul li a:hover, nav ul li a:focus {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding: 1rem;
-  grid-template-areas: "grid__equipos" "grid__atomizadores" "grid__eliquids"; }
+  grid-template-areas: "grid__equipos"
+ "grid__atomizadores"
+ "grid__eliquids"; }
 
 .grid__equipos {
   display: grid;
@@ -422,7 +433,9 @@ nav ul li a:hover, nav ul li a:focus {
     justify-content: stretch;
     position: relative;
     grid-row-gap: 6px;
-    grid-template-areas: "promoUno promoUno" "promoChica1 promoChica1" "promoChica2 promoChica2"; }
+    grid-template-areas: "promoUno promoUno"
+ "promoChica1 promoChica1"
+ "promoChica2 promoChica2"; }
   .italica {
     padding: 1.5rem 3rem 1.5rem 3rem; }
   .col-auto {

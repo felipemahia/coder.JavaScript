@@ -1,9 +1,8 @@
 let edad = prompt("Ingresá tu edad"); //Si me animo y si se aprende acá, voy a hacer un login/register antes de ir a la página principal.
-
+ 
 if (edad < 18) {
     alert('Afuera chiquito!')
-        window.location.href = "siEsMenor.html"  /* Lo puse así para que no se pueda ir para atrás, perdón si jode mucho xD. */
-    
+    window.location.href = "siEsMenor.html"  
 } else {
     alert('Puede ingresar');
 }
@@ -52,8 +51,6 @@ class Equipos {
 }
 const catalogoEquipos = []
 
-
-
 //Equipo para principiantes
 catalogoEquipos.push(new Equipos(1, 'SMOK', 'nord4', 1100, 'principiantes', "./imagenes/1 Principiantes/Nord Pod/1.jpg"))
 catalogoEquipos.push(new Equipos(2, 'SMOK', 'vapePen22', 1500, 'principiantes', "./imagenes/1 Principiantes/VapePen 22/1.jpg"))
@@ -82,10 +79,7 @@ const seccionEquipos = document.getElementById('idEquipos')
 //
 const cardsEquiposPrincipiantes = (equiposPrincipiantes) => {
     for (let element of equiposPrincipiantes) {
-        if (element.id <= (6)) {     /* Esto me funciona, pero no sé cómo hacerlo para los que van del ID 7 a 10 y de 11 a 16, así que le busqué otra vuelta y por eso están hechas subcategorías mediante slice en las líneas 74 a 76. 
-        No se si es mejor o peor, pero fue la solución que encontré ahora. O sea, si sacas este if anda igual. 
-        
-        3:24 del domingo, me doy cuenta que capaz se solucionas haciendo if (Equipos.id) <=6) y ahí toma el id del class Equipos de más arriba.*/
+        if (element.id <= (6)) {
             let div = document.createElement('div')
             div.className = 'col-md-4 card'
             div.style = 'max-width: 18rem;'
@@ -94,8 +88,8 @@ const cardsEquiposPrincipiantes = (equiposPrincipiantes) => {
     <img class="img-fluid" src="${element.img}" class="card-img-top" alt="Equipo de inicio, de marca smok modelo Nord 4">
     <div class="card-body">
     <h5 class="card-title">${element.marca} ${element.modelo}</h5>
-    <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
-    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    <p class="card-text">Esto será una descripción personalizada. $${element.precio}</p>
+    <div id=${element.id} class="cardflex"><button id="btnCompra" class="btn btn-primary">Agregar al carrito</button>
     </div>
     </div>
     `
@@ -108,7 +102,6 @@ cardsEquiposPrincipiantes(equiposPrincipiantes);
 const cardsEquiposAvanzados = (equiposAvanzados) => {
 
     for (let element of equiposAvanzados) {
-        /* if (element.id > (6)){ */     /* Esto es una media solución, porque va desde el id 7 al 10, o sea, me falta un corte más */
         let div = document.createElement('div')
         div.className = 'col-md-4 card'
         div.style = 'max-width: 18rem;'
@@ -120,7 +113,7 @@ const cardsEquiposAvanzados = (equiposAvanzados) => {
     <div class="card-body">
     <h5 class="card-title">${element.marca} ${element.modelo}</h5>
     <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
-    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    <div id=${element.id} class="cardflex"><button id="btnCompra" class="btn btn-primary">Agregar al carrito</button>
     </div>
     </div>
     `
@@ -132,7 +125,6 @@ cardsEquiposAvanzados(equiposAvanzados)
 const cardsEquiposPro = (equiposPro) => {
 
     for (let element of equiposPro) {
-        /* if (element.id > (6)){ */     /* Acá está el resto xD */
         let div = document.createElement('div');
         div.className = 'col-md-4 card';
         div.style = 'max-width: 18rem;,  justify-content: center';
@@ -144,7 +136,7 @@ const cardsEquiposPro = (equiposPro) => {
     <div class="card-body">
     <h5 class="card-title">${element.marca} ${element.modelo}</h5>
     <p class="card-text">Esto será una descripción personalizada. ${element.precio}</p>
-    <div id=${element.id} class="cardflex"><a href="#" class="btn btn-primary">Agregar al carrito</a>
+    <div id=${element.id} class="cardflex"><button id="btnCompra" class="btn btn-primary">Agregar al carrito</button>
     </div>
     </div>
     `
@@ -153,30 +145,28 @@ const cardsEquiposPro = (equiposPro) => {
 }
 cardsEquiposPro(equiposPro)
 
-// EVENTOS
-
 const btnEnviar = document.querySelector('#btnEnviar')
 
-function agradecerContacto (nombre){
-    alert (`Gracias por contactarte con VapeLife, ${nombre} \nTe responderemos a la brevedad!`)
+function agradecerContacto(nombre) {
+    alert(`Gracias por contactarte con VapeLife, ${nombre} \nTe responderemos a la brevedad!`)
 }
-btnEnviar.onclick = () =>{
+btnEnviar.onclick = () => {
     let nombre = document.getElementById('fname').value;
     agradecerContacto(nombre)
 }
 
-// EVENTOS
+const Carrito = [];
 
 
+//Intenté agregar eventos a los botones, pero no pude, pero te dejo comentado acá las cosas que fui probando para resolver y no me salieron xD
 
 
-//De aquí para abajo está comentado porque voy a fusionarlo con la entrega de Eventos. 
-
-
-
-
-
-/* const Carrito = [];
+/* const btnCompra = document.querySelector('#btnCompra')
+btnCompra.onclick = () =>{
+    agregarProducto();
+}  
+ */
+// Imagino que tengo que cambiar la función flecha de agregarProducto, para que en vez de un for of me haga un filtro
 
 const agregarProducto = () => {
     let list = 'Seleccioná el producto que desees \n';
@@ -251,7 +241,7 @@ while (true) {
     }
 }
 
-let criterioDeOrden = parseInt(prompt('Elegí cómo queres ordenar los productos:\n 1 - Por marca\n 2 - Por precio ascendente\n 3 - Por precio descendente\n  4 - Por categoría\n'))
+/* let criterioDeOrden = parseInt(prompt('Elegí cómo queres ordenar los productos:\n 1 - Por marca\n 2 - Por precio ascendente\n 3 - Por precio descendente\n  4 - Por categoría\n'))
 
 function ordenar(criterioDeOrden, array) {
     let arrayOrdenado = array;
@@ -273,9 +263,10 @@ function ordenar(criterioDeOrden, array) {
             alert('No es un criterio válido');
             break;
     }
-}
+} */
 
 
+/* 
 function mostrar(array) {
     let info = '';
     array.forEach(element => {

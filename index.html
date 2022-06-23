@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vape Life - Inicio</title>
     <link rel="icon" href="imagenes/LOGO.png">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
     <!-- Fuentes -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Glitch&family=Rubik:wght@300;400;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Glitch&family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- META -->
@@ -24,7 +25,7 @@
     <meta name="keywords" content="vapeo, cigarrillo, atomizador, eliquids, liquidos, equipos, sabor, Uruguay">
 </head>
 
-<body>
+<body class="blur">
     <div>
         <header class="header">
             <div class="header__contenedor">
@@ -36,13 +37,13 @@
                     <ul class="header__navLista" id="sidebar">
                         <li><a class="nav__item--activo" href="index.html">Home</a></li>
                         <li><a href="#equiposNavBar">Equipos</a></li>
-                        <li><a href="#atoNavBar">Atomizadores</a></li>
                         <li><a href="#eliquidsNavBar">E-Liquids</a></li>
+                        <li><a href="#" ><button id="carritoNavBar"><i class="fa-solid fa-cart-shopping"></button></i></a></li>
                         <li id="cerrarsidebar"><a href="#">❌</a></li>
                     </ul>
                 </nav>
             </div>
-        </header>
+        </header> 
         <section class="promo">
             <div class="gridPromoContenedor">
                 <div class="grid__promoUno"> <a href="#"><img class="promo__Uno"
@@ -61,309 +62,124 @@
         </section>
     </div>
     <main>
-        <!-- <section class="solomobile">
-            <h3>Dejar de fumar nunca fue tan sencillo; <span class="glitch">bienvenidos a VapeLife</span></h3>
+        <section id="equiposNavBar">
+            <h2 class="separador">Equipos <span class="negrita">principiantes</span></h2>
+            <div class="container">
+                <div id="Principiantes" class="container row">
+
+                </div>
+            </div>
+
+            </div>
+
+            <h2 class="separador">Equipos <span class="negrita">avanzados</span></h2>
+            <div class="container">
+                <div id="Avanzados" class="container row">
+
+                </div>
+            </div>
+            <h2 class="separador">Equipos <span class="negrita">PRO</span></h2>
+            <div class="container">
+                <div id="Pro" class="container row">
+
+                </div>
+            </div>
         </section>
-        <div class="grid__item">
-            <h2 class="separador">Equipos</h2>
-            <p>VapeLife tiene un amplio catálogo de equipos para empezar tu camino en el mundo del vapeo.</p>
-            <section>
-                <div class="container" id="pisarFlexbox" data-aos="fade-right">
-                    <section>
-                        <h2 class="separador">Equipos para <span class="negrita">principiantes</span></h2>
-                        <div class="container row">
-                            <div class="card-group">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/1 Principiantes/Nord Pod/1.jpg"
-                                            class="card-img-top" alt="Equipo de inicio, de marca smok modelo Nord 4">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Smok Nord 4 POD</h5>
-                                            <p class="card-text">Estilo POD, lo más sencillo pero eficiente.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/1 Principiantes/VapePen 22/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo de inicio, de marca Smok, modelo VapePen 22">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Smok VapePen 22</h5>
-                                            <p class="card-text">Simple pero elegante.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/1 Principiantes/Smok Stick Prince/1.jpg"
-                                            class="card-img-top" alt="Equipo de inicio, de marca Smok, modelo Prince">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Smok Stick Prince</h5>
-                                            <p class="card-text">Kit de inicio... a lo grande.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/1 Principiantes/Sky Solo/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo de inicio, de marca Vaporesso, modelo Sky Solo">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vaporesso Sky Solo</h5>
-                                            <p class="card-text">Cabe en el bolsillo pero el límite es el cielo.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid"
-                                            src="./imagenes/1 Principiantes/Joyctech exceed grip/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo de inicio, de marca Joytech, modelo Exceed Grip">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Joytech Exceed Grip</h5>
-                                            <p class="card-text">Simple pero poderoso.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/1 Principiantes/Vaporesso Pod/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo de inicio, de marca Joytech, modelo Exceed Grip">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vaporesso Pod</h5>
-                                            <p class="card-text">Estilo POD, el pequeño primer paso.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
+        <section id="eliquidsNavBar">
+            <section id="equiposNavBar">
+                <h2 class="separador">Liquidos <span class="negrita">King Crest</span></h2>
+                <div class="container">
+                    <div id="kingCrest" class="container row">
+
+                    </div>
                 </div>
-                <div class="container" id="pisarFlexbox" data-aos="fade-left">
-                    <section>
-                        <h2 class="separador">Equipos <span class="negrita">avanzados</span></h2>
-                        <div class="container">
-                            <div class="card-group">
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/2 Avanzados/Kit voopoo drag 3/1.jpg"
-                                            class="card-img-top" alt="Equipo avanzado, de marca Voopoo, modelo Drag X">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Voopoo Drag X Plus</h5>
-                                            <p class="card-text">Drag en formato kit... Nada puede salir mal.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/2 Avanzados/Kit Aegis Max/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo avanzado, de marca GeekVape, modelo Aegis MAX">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Aegis MAX</h5>
-                                            <p class="card-text">Un todo terreno con un tanque poderoso.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/2 Avanzados/Aegis Boost+/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo avanzado, de marca GeekVape, modelo Aegis Boost Pro">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Boost pro</h5>
-                                            <p class="card-text">Sencillamente revolucionario y potente.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/2 Avanzados/Vaporesso Gen S/1.jpg"
-                                            class="card-img-top"
-                                            alt="Equipo avanzado, de marca Vaporesso, modelo Gen S">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vaporesso Gen-S</h5>
-                                            <p class="card-text">El mejor chip del mercado y la mejor estética.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
                 </div>
-                <div class="container" id="pisarFlexbox" data-aos="fade-right">
-                    <section>
-                        <h2 class="separador">Equipos <span class="negrita">PRO</span></h2>
-                        <div class="container">
-                            <div class="card-group">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 1.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Ehpro, modelo Armor">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Semi-Mech MOD Armor Ehpro</h5>
-                                            <p class="card-text">Semi mecánico... Poderoso y seguro.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 2.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Voopoo, modelo Drag 3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Drag 3</h5>
-                                            <p class="card-text">Calidad, estética y potencia, todo en uno.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 3.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Vaporesso, modelo Luxe">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vaporesso Luxe</h5>
-                                            <p class="card-text">Nuestro único mod de pantalla táctil.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 4.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Desire, modelo Cut">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Desire CUT</h5>
-                                            <p class="card-text">Mod potente y portátil.</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 5.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Augvape, modelo VX217">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Augvape VX217</h5>
-                                            <p class="card-text">Mod compatible con baterias 21700, 20700 y 18650.
-                                            </p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid" src="./imagenes/3 Pro/Equipo pro 6.jpg"
-                                            class="card-img-top" alt="Mod para vapeo, de marca Hellvape, modelo Arez">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Hellvape Arez</h5>
-                                            <p class="card-text">Mod de baja potencia pero de una bateria</p>
-                                            <div class="cardflex"><a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
+                <h2 class="separador">Liquidos <span class="negrita">Ice Monster</span></h2>
+                <div class="container">
+                    <div id="iceMonster" class="container row">
+
+                    </div>
+                </div>
+                <h2 class="separador">Liquidos <span class="negrita">Vapetasia</span></h2>
+                <div class="container">
+                    <div id="vapetasia" class="container row">
+
+                    </div>
                 </div>
             </section>
-        </div> -->
-    
+        </section>
 
+        <h2 class="separador">Contáctenos</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="get">
+                            <fieldset>
 
-    <h2 class="separador">Aquí empieza pero escribiendo en <span class="negrita">JavaScript</span></h2>
-    <div class="container" id="equiposNavBar">
-        <div id="idEquipos" class="container row">
-
-        </div>
-    </div>
-
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="well well-sm">
-                    <form class="form-horizontal" method="get">
-                        <fieldset>
-                            <legend class="text-center" id="header-legend">Contáctenos</legend>
-                            <div class="form-group">
-                                <div class="col">
-                                    <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
+                                <div class="form-group">
+                                    <div class="col">
+                                        <input id="fname" name="name" type="text" placeholder="Nombre"
+                                            class="form-control">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col">
-                                    <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
+                                <div class="form-group">
+                                    <div class="col">
+                                        <input id="lname" name="name" type="text" placeholder="Apellido"
+                                            class="form-control">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col">
-                                    <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                                <div class="form-group">
+                                    <div class="col">
+                                        <input id="email" name="email" type="text" placeholder="Email"
+                                            class="form-control">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col">
-                                    <input id="phone" name="phone" type="text" placeholder="Celular/Telefono" class="form-control">
+                                <div class="form-group">
+                                    <div class="col">
+                                        <input id="phone" name="phone" type="text" placeholder="Celular/Telefono"
+                                            class="form-control">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Deja aquí tu mensaje y te responderemos en cuanto podamos" rows="5"></textarea>
+                                <div class="form-group">
+                                    <div class="col">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Deja aquí tu mensaje y te responderemos en cuanto podamos"
+                                            rows="5"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" id="btnEnviar" class="btn btn-primary btn-lg">Enviar</button>
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" id="btnEnviar"
+                                            class="btn btn-primary btn-lg">Enviar</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-
-
-
-
+    </main>
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/0366d03abd.js" crossorigin="anonymous"></script>
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- Toastify -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Script personal-->
     <script src="js/script.js"></script>
 </body>
 
